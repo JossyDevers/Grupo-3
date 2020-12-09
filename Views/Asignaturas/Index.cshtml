@@ -1,0 +1,118 @@
+﻿@model IEnumerable<StudentService.Models.Asignaturas>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="content-section-heading" style="text-align: center;">
+                <h2 class="mb-5">Visualizar Asignaturas</h2>
+            </div>
+            <div class="table100 ver1">
+                <div class="table100-firstcol">
+                    <table>
+                        <thead>
+                            <tr class="row100 head">
+                                <th class="cell100 column1">
+                                    @Html.DisplayNameFor(model => model.Nombre)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">
+                                        @Html.DisplayFor(modelItem => item.Nombre)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="wrap-table100-nextcols js-pscroll">
+                    <div class="table100-nextcols">
+                        <table>
+                            <thead>
+                                <tr class="row100 head">
+                                    <th class="cell100 column2">
+                                        @Html.DisplayNameFor(model => model.Numero)
+                                    </th>
+                                    <th class="cell100 column3">
+                                        @Html.DisplayNameFor(model => model.Tipo)
+                                    </th>
+                                    <th class="cell100 column4">
+                                        @Html.DisplayNameFor(model => model.IdCurso)
+                                    </th>
+                                    <th class="cell100 column5">
+                                        @Html.DisplayNameFor(model => model.Duracion)
+                                    </th>
+                                    <th class="cell100 column6">
+                                        Acciones
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr class="row100 body">
+                                        <td class="cell100 column3">
+                                            @Html.DisplayFor(modelItem => item.Numero)
+                                        </td>
+                                        <td class="cell100 column4">
+                                            @Html.DisplayFor(modelItem => item.Tipo)
+                                        </td>
+                                        <td class="cell100 column5">
+                                            @Html.DisplayFor(modelItem => item.IdCurso)
+                                        </td>
+                                        <td class="cell100 column6">
+                                            @Html.DisplayFor(modelItem => item.Duracion)
+                                        </td>
+                                        <td class="cell100 column7">
+                                            <a asp-action="Edit" asp-route-id="@item.Id">
+                                                <span class="rounded-circle mx-auto mb-3">
+                                                    <i style="font-size: 2em;" class="icon-pencil"></i>
+                                                </span>
+                                            </a> |
+                                            <a asp-action="Details" asp-route-id="@item.Id">
+                                                <span class="rounded-circle mx-auto mb-3">
+                                                    <i style="font-size: 2em;" class="icon-mouse"></i>
+                                                </span>
+                                            </a> |
+                                            <a asp-action="Delete" asp-route-id="@item.Id">
+                                                <span class="rounded-circle mx-auto mb-3">
+                                                    <i style="font-size: 2em;" class="icon-close"></i>
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content-section bg-primary text-white text-center" id="services">
+    <div class="container">
+        <div class="content-section-heading">
+            <h2 class="mb-5">Menú Asignaturas</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6" onclick="window.location = '/asignaturas/menu'">
+                <span class="service-icon rounded-circle mx-auto mb-3">
+                    <i class="icon-arrow-left"></i>
+                </span>
+                <h4>
+                    <strong>Volver atrás</strong>
+                </h4>
+            </div>
+        </div>
+    </div>
+</section>

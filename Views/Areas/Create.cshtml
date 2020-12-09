@@ -1,0 +1,51 @@
+﻿@model StudentService.Models.Areas
+
+@{
+    ViewData["Title"] = "Create";
+}
+<center>
+    <h1>Create</h1>
+
+    <h4>Áreas</h4>
+    <hr />
+    <div class="limiter row justify-content-center" style="text-align: center;">
+        <div class="row">
+            <div class="col-md-10">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Nombre" class="control-label"></label>
+                        <input asp-for="Nombre" class="form-control" />
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IdDepartamento" class="control-label"></label>
+                        <select asp-for="IdDepartamento" class="form-control" asp-items="ViewBag.IdDepartamento"></select>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</center>
+
+
+<section class="content-section bg-primary text-white text-center" id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6" onclick="window.location = '/asignaturas/menu'">
+                <span class="service-icon rounded-circle mx-auto mb-3">
+                    <i class="icon-arrow-left"></i>
+                </span>
+                <h4>
+                    <strong>Volver atrás</strong>
+                </h4>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

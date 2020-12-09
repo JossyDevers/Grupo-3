@@ -1,0 +1,147 @@
+﻿@model StudentService.Models.Asignaturas
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<center>
+    <hr />
+    <h1 style="color: white;">Editar Asignaturas</h1>
+    <hr />
+    <div class="limiter row justify-content-center">
+        <div class="col-md-8 mb-5 mt-5">
+            <form asp-action="Edit">
+                <div class="row justify-content-center" style="text-align: center;">
+                    <div class="col-sm col-sm-4">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <div class="form-group">
+                            <label asp-for="Nombre" class="control-label"></label>
+                            <input asp-for="Nombre" class="form-control" />
+                            <span asp-validation-for="Nombre" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm col-sm-4">
+                        <div class="form-group">
+                            <label asp-for="Numero" class="control-label"></label>
+                            <input asp-for="Numero" class="form-control" />
+                            <span asp-validation-for="Numero" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm col-sm-4">
+                        <div class="form-group">
+                            <label asp-for="Tipo" class="control-label"></label>
+                            <input asp-for="Tipo" class="form-control" />
+                            <span asp-validation-for="Tipo" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm col-sm-4">
+                        <div class="form-group">
+                            <label asp-for="IdCurso" class="control-label"></label>
+                            <input asp-for="IdCurso" class="form-control" />
+                            <span asp-validation-for="IdCurso" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm col-sm-4">
+                        <div class="form-group">
+                            <label asp-for="Duracion" class="control-label"></label>
+                            <input asp-for="Duracion" class="form-control" />
+                            <span asp-validation-for="Duracion" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm col-sm-4">
+                        <div class="form-group">
+                            <label asp-for="CreditosTeoricos" class="control-label"></label>
+                            <input asp-for="CreditosTeoricos" class="form-control" />
+                            <span asp-validation-for="CreditosTeoricos" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm col-sm-4">
+                        <div class="form-group">
+                            <label asp-for="CreditosPracticos" class="control-label"></label>
+                            <input asp-for="CreditosPracticos" class="form-control" />
+                            <span asp-validation-for="CreditosPracticos" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm col-sm-4">
+                        <div class="form-group">
+                            <label asp-for="GruposTeoricos" class="control-label"></label>
+                            <input asp-for="GruposTeoricos" class="form-control" />
+                            <span asp-validation-for="GruposTeoricos" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm col-sm-4">
+                        <div class="form-group">
+                            <label asp-for="GruposPracticos" class="control-label"></label>
+                            <input asp-for="GruposPracticos" class="form-control" />
+                            <span asp-validation-for="GruposPracticos" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm col-sm-4">
+                        <div class="form-group">
+                            <label asp-for="IdProfesor" class="control-label"></label>
+                            <select asp-for="IdProfesor" class="form-control" asp-items="ViewBag.IdProfesor"></select>
+                            <span asp-validation-for="IdProfesor" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm col-sm-4">
+                        <div class="form-group">
+                            <label asp-for="IdArea" class="control-label"></label>
+                            <select asp-for="IdArea" class="form-control" asp-items="ViewBag.IdArea"></select>
+                            <span asp-validation-for="IdArea" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm col-sm-4">
+                        <div class="form-group">
+                            <label asp-for="IdTitulacion" class="control-label"></label>
+                            <select asp-for="IdTitulacion" class="form-control" asp-items="ViewBag.IdTitulacion"></select>
+                            <span asp-validation-for="IdTitulacion" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm col-sm-4">
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="LibConf" /> @Html.DisplayNameFor(model => model.LibConf)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm col-sm-4">
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="LimAdm" /> @Html.DisplayNameFor(model => model.LimAdm)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm col-sm-12">
+                        <div class="form-group">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</center>
+
+<section class="content-section bg-primary text-white text-center" id="services">
+    <div class="container">
+        <div class="content-section-heading">
+            <h2 class="mb-5">Menu Asignaturas</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6" onclick="window.location = '/asignaturas/menu'">
+                <span class="service-icon rounded-circle mx-auto mb-3">
+                    <i class="icon-arrow-left"></i>
+                </span>
+                <h4>
+                    <strong>Volver atras</strong>
+                </h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,73 @@
+﻿@model StudentService.Models.HorarioDeConsultas
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<style>
+    body {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("/images/blue.png");
+    }
+</style>
+
+<center>
+    <hr />
+    <h1 style="color: white;">Asignar Horarios De Consulta</h1>
+    <hr />
+    <div class="limiter row justify-content-center" style="text-align: center;">
+        <div class="col-md-8 mb-5 mt-5">
+            <form asp-action="Create">
+                <div class="row justify-content-center" style="text-align: center;">
+                    <div class="col-sm col-sm-4">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Dia" class="control-label"></label>
+                            <input asp-for="Dia" class="form-control" />
+                            <span asp-validation-for="Dia" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm col-sm-4">
+                        <div class="form-group">
+                            <label asp-for="Hora" class="control-label"></label>
+                            <input asp-for="Hora" class="form-control" />
+                            <span asp-validation-for="Hora" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm col-sm-4">
+                        <div class="form-group">
+                            <label asp-for="IdProfesor" class="control-label"></label>
+                            <select asp-for="IdProfesor" class="form-control" asp-items="ViewBag.IdProfesor"></select>
+                        </div>
+                    </div>
+                    <div class="col-sm col-sm-12">
+                        <div class="form-group">
+                            <input type="submit" value="Agregar" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</center>
+
+<section class="content-section bg-primary text-white text-center" id="services">
+    <div class="container">
+        <div class="content-section-heading">
+            <h2 class="mb-5">Menú Horarios De Consulta</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6" onclick="window.location = '/profesores/menu'">
+                <span class="service-icon rounded-circle mx-auto mb-3">
+                    <i class="icon-arrow-left"></i>
+                </span>
+                <h4>
+                    <strong>Volver atrás</strong>
+                </h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

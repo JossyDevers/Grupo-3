@@ -1,0 +1,98 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <UserSecretsId>d8917026-6b5c-4bc3-96e3-99ddc29d69ad</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Cursos\Menu.cshtml" />
+    <Content Remove="Views\Estudiantes\Menu.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Areas\Create.cshtml" />
+    <None Include="Views\Areas\Delete.cshtml" />
+    <None Include="Views\Areas\Details.cshtml" />
+    <None Include="Views\Areas\Edit.cshtml" />
+    <None Include="Views\Areas\Index.cshtml" />
+    <None Include="Views\Areas\Menu.cshtml" />
+    <None Include="Views\AsignaturaEquivalentes\Create.cshtml" />
+    <None Include="Views\AsignaturaEquivalentes\Delete.cshtml" />
+    <None Include="Views\AsignaturaEquivalentes\Details.cshtml" />
+    <None Include="Views\AsignaturaEquivalentes\Edit.cshtml" />
+    <None Include="Views\AsignaturaEquivalentes\Index.cshtml" />
+    <None Include="Views\AsignaturaIncompatibles\Create.cshtml" />
+    <None Include="Views\AsignaturaIncompatibles\Delete.cshtml" />
+    <None Include="Views\AsignaturaIncompatibles\Details.cshtml" />
+    <None Include="Views\AsignaturaIncompatibles\Edit.cshtml" />
+    <None Include="Views\AsignaturaIncompatibles\Index.cshtml" />
+    <None Include="Views\Asignaturas\Create.cshtml" />
+    <None Include="Views\Asignaturas\Delete.cshtml" />
+    <None Include="Views\Asignaturas\Details.cshtml" />
+    <None Include="Views\Asignaturas\Edit.cshtml" />
+    <None Include="Views\Asignaturas\Index.cshtml" />
+    <None Include="Views\Asignaturas\Menu.cshtml" />
+    <None Include="Views\Cursos\Menu.cshtml" />
+    <None Include="Views\Departamentos\Create.cshtml" />
+    <None Include="Views\Departamentos\Delete.cshtml" />
+    <None Include="Views\Departamentos\Details.cshtml" />
+    <None Include="Views\Departamentos\Edit.cshtml" />
+    <None Include="Views\Departamentos\Index.cshtml" />
+    <None Include="Views\Departamentos\Menu.cshtml" />
+    <None Include="Views\Estudiantes\Menu.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\Miembros.cshtml" />
+    <None Include="Views\Home\Principal.cshtml" />
+    <None Include="Views\HorarioDeConsultas\Create.cshtml" />
+    <None Include="Views\HorarioDeConsultas\Delete.cshtml" />
+    <None Include="Views\HorarioDeConsultas\Details.cshtml" />
+    <None Include="Views\HorarioDeConsultas\Edit.cshtml" />
+    <None Include="Views\HorarioDeConsultas\Index.cshtml" />
+    <None Include="Views\Profesores\Create.cshtml" />
+    <None Include="Views\Profesores\Delete.cshtml" />
+    <None Include="Views\Profesores\Details.cshtml" />
+    <None Include="Views\Profesores\Edit.cshtml" />
+    <None Include="Views\Profesores\Index.cshtml" />
+    <None Include="Views\Profesores\Menu.cshtml" />
+    <None Include="Views\Shared\_CookieConsentPartial.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_Layout2.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Views\Titulaciones\Create.cshtml" />
+    <None Include="Views\Titulaciones\Delete.cshtml" />
+    <None Include="Views\Titulaciones\Details.cshtml" />
+    <None Include="Views\Titulaciones\Edit.cshtml" />
+    <None Include="Views\Titulaciones\Index.cshtml" />
+    <None Include="Views\_ViewImports.cshtml" />
+    <None Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Update="wwwroot\images\JossyDevers.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

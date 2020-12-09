@@ -1,0 +1,122 @@
+﻿@model StudentService.Models.Asignaturas
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<center>
+    <hr />
+    <h1 style="color: white;" class="mt-5 mb-5">Agregar Asignaturas</h1>
+    <hr />
+    <h1>Estas eliminando la asignatura: @Model.Nombre</h1>
+
+    <h3 class="mb-5">Estas seguro de eliminar esta asignaturas?</h3>
+    <div>
+        <h4 cl>Asignatura Selecionada</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Nombre)
+            </dt>
+            <dd class="col-sm-4">
+                @Html.DisplayFor(model => model.Nombre)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Numero)
+            </dt>
+            <dd class="col-sm-4">
+                @Html.DisplayFor(model => model.Numero)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Tipo)
+            </dt>
+            <dd class="col-sm-4">
+                @Html.DisplayFor(model => model.Tipo)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IdCurso)
+            </dt>
+            <dd class="col-sm-4">
+                @Html.DisplayFor(model => model.IdCurso)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Duracion)
+            </dt>
+            <dd class="col-sm-4">
+                @Html.DisplayFor(model => model.Duracion)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CreditosTeoricos)
+            </dt>
+            <dd class="col-sm-4">
+                @Html.DisplayFor(model => model.CreditosTeoricos)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CreditosPracticos)
+            </dt>
+            <dd class="col-sm-4">
+                @Html.DisplayFor(model => model.CreditosPracticos)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.GruposTeoricos)
+            </dt>
+            <dd class="col-sm-4">
+                @Html.DisplayFor(model => model.GruposTeoricos)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.GruposPracticos)
+            </dt>
+            <dd class="col-sm-4">
+                @Html.DisplayFor(model => model.GruposPracticos)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.LibConf)
+            </dt>
+            <dd class="col-sm-4">
+                @Html.DisplayFor(model => model.LibConf)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.LimAdm)
+            </dt>
+            <dd class="col-sm-4">
+                @Html.DisplayFor(model => model.LimAdm)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IdAreaNavigation)
+            </dt>
+            <dd class="col-sm-4">
+                @Html.DisplayFor(model => model.IdAreaNavigation.Nombre)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IdProfesorNavigation)
+            </dt>
+            <dd class="col-sm-4">
+                @Html.DisplayFor(model => model.IdProfesorNavigation.Despacho)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IdTitulacionNavigation)
+            </dt>
+            <dd class="col-sm-4">
+                @Html.DisplayFor(model => model.IdTitulacionNavigation.Nombre)
+            </dd>
+        </dl>
+
+        <section class="content-section bg-primary text-white text-center" id="services">
+            <div class="container">
+                <div class="content-section-heading">
+                    <h2 class="mb-5">Menu Asignaturas</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6" onclick="window.location = '/asignaturas/menu'">
+                        <span class="service-icon rounded-circle mx-auto mb-3">
+                            <i class="icon-arrow-left"></i>
+                        </span>
+                        <h4>
+                            <strong>Volver atras</strong>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</center>

@@ -1,0 +1,24 @@
+﻿@model StudentService.Models.AsignaturaEquivalentes
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>AsignaturaEquivalentes</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdAsignaturaEquivalenteNavigation)
+        </dt>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdAsignaturaNavigation)
+        </dt>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

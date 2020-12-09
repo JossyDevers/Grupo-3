@@ -1,0 +1,80 @@
+﻿@model IEnumerable<StudentService.Models.Titulaciones>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="content-section-heading" style="text-align: center;">
+                <h2 class="mb-5">Visualizar Profesores</h2>
+            </div>
+            <div class="table100 ver1">
+                <div class="table100-firstcol">
+                    <table>
+                        <thead>
+                            <tr class="row100 head">
+                                <th class="cell100 column1">
+                                    @Html.DisplayNameFor(model => model.Nombre)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr class="row100 body">
+                                <td class="cell100 column1">
+                                    @Html.DisplayFor(modelItem => item.Nombre)
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="wrap-table100-nextcols js-pscroll">
+                    <div class="table100-nextcols">
+                        <table>
+                            <thead>
+                                <tr class="row100 head">
+                                    <th class="cell100 column2">
+                                        Acciones
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                <tr class="row100 body">
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content-section bg-primary text-white text-center" id="services">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6" onclick="window.location = '/departamentos/menu'">
+                <span class="service-icon rounded-circle mx-auto mb-3">
+                    <i class="icon-arrow-left"></i>
+                </span>
+                <h4>
+                    <strong>Volver atrás</strong>
+                </h4>
+            </div>
+        </div>
+    </div>
+</section>
