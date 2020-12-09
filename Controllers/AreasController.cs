@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using StudentService.Models;
 
+// Prueba
+
 namespace StudentService.Controllers
 {
     public class AreasController : Controller
